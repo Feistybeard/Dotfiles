@@ -1,0 +1,16 @@
+windows=$(yabai -m query --windows --display 1 | jq '[.[] | select(."is-visible"==true and ."is-floating"==false)] | length')
+space=$(yabai -m query --spaces --space | jq .index)
+
+if [[ $windows == 1 ]]; then
+  yabai -m config --space $space left_padding 1713
+  yabai -m config --space $space right_padding 1713
+  yabai -m space --balance
+elif [[ $windows == 2 ]]; then
+  yabai -m config --space $space left_padding 849
+  yabai -m config --space $space right_padding 849
+  yabai -m space --balance
+elif [[ $windows == 3 ]]; then
+  yabai -m config --space $space left_padding 12
+  yabai -m config --space $space right_padding 12
+  yabai -m space --balance
+fi
