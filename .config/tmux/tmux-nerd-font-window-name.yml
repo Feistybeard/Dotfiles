@@ -1,0 +1,8 @@
+config:
+  # fallback-icon: "❓"
+  multi-pane-icon: "🪟"
+  show-name: false
+
+icons:
+  cmatrix: "🤯" # add new entries that aren't included
+  zsh: ""
