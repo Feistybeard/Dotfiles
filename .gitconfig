@@ -1,0 +1,23 @@
+[user]
+	name = Marvan Al Kufai
+	email = alkufai@gmail.com
+	signinkey = /Users/marvan/.ssh/id_ed25519.pub
+	signingkey = /Users/marvan/.ssh/id_ed25519.pub
+[core]
+	editor = vim
+[init]
+	defaultbranch = main
+[gpg]
+	format = ssh
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
+[gpg "ssh"]
+	defaultKeyCommand = ssh-add -L
